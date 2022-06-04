@@ -1,0 +1,84 @@
+#content {
+    size: 21cm 29.7cm;
+    margin: 5mm 10mm;
+    /* change the margins as you want them to be. */
+    max-width: 800px;
+}
+
+.parent {
+    overflow: auto;
+}
+
+.child {
+    display: block;
+    float: left;
+}
+
+/* Растягиваем второй блок на максимальнуцю ширину */
+.child.max {
+    float: none;
+    overflow: auto;
+    border-bottom: 1px solid;
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 0.5em;
+}
+
+.child.line {
+    display: inline-block;
+    border-bottom: 1px solid;
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 0.5em;
+}
+
+select {
+    max-width: 800px;
+    white-space: pre-wrap;
+    min-width: 250px;
+}
+
+.anno {
+    font-size: 0.8em;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.annoright {
+    font-size: 0.8em;
+    position: relative;
+    text-align: right;
+    right: 35px;
+}
+
+#fillerPopup {
+    padding: 15px;
+    position: fixed;
+    z-index: 10000;
+    background: #1b1a1a;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+#fillerPopup.active {
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+td {
+    border: 1px solid;
+
+}
+
+.filler {
+    background-color: pink;
+}
