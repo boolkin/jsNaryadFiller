@@ -26,10 +26,8 @@ function fillOptions(array, optName) {
 }
 
 function pdfPrint() {
-	document.getElementById('printbutton').style = "display:none;";
 	window.print();
 	return false;
-
 }
 
 function addFillerClickListener() {

@@ -9,15 +9,15 @@
 </head>
 
 <body>
-	<div id="printbutton" contenteditable="true">
+	<div id="printbutton">
 		<input type="button" value="Print" onclick="pdfPrint()">
-		<span id="dateToday"></span>, <span id="timeToday"></span>
+		<span id="dateToday"  contenteditable="true"></span>, <span id="timeToday"  contenteditable="true"></span>
 		<input type="button" value="Заполнить дату и время" onclick="dateTimeFiller()">
 	</div>
 	<div id="content">
 
 		Предприятие, подразделение <b><u>ООО «СТК», цех №8.</u></b><br><br>
-		<center onclick="document.getElementById('printbutton').style = 'display:block;'"><b>НАРЯД - ДОПУСК № <br>
+		<center><b>НАРЯД - ДОПУСК № <br>
 				на выполнение работ повышенной опасности</b></center><br>
 		<div class="parent">
 			<div class="child">1. Производитель работ: </div>

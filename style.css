@@ -1,3 +1,13 @@
+@media print {
+	html, body {
+        height: 297mm;
+		width: 210mm;
+		font-size: 14px;
+	}
+    #printbutton {
+        display: none;
+    }
+}  
 #content {
     size: 21cm 29.7cm;
     margin: 5mm 10mm;
@@ -5,12 +15,13 @@
     max-width: 800px;
 }
 
+body {
+    font-size: 14px;
+}
 .parent {
     overflow: auto;
 }
-body {
-	font-size:11pt;
-}
+
 .child {
     display: block;
     float: left;
@@ -43,13 +54,13 @@ select {
 }
 
 .anno {
-    font-size: 8pt;
+    font-size: 0.8em;
     text-align: center;
     margin-left: 50px;
 }
 
 .annoright {
-    font-size: 8pt;
+    font-size: 0.8em;
     position: relative;
     text-align: right;
     right: 35px;
