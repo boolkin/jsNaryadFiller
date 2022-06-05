@@ -44,19 +44,23 @@ function addFillerClickListener() {
 		});
 	});
 }
-function dateTimeFiller() {
+
+function todayDate() {
 	let today = new Date();
-	let dateTime = today.toLocaleString("ru", { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-	let onlyDate = today.toLocaleString("ru", { year: 'numeric', month: 'numeric', day: 'numeric' });
+	let todayTime = today.toLocaleString("ru", { hour: '2-digit', minute: '2-digit' });
+	let todayDate = today.toLocaleString("ru", { year: 'numeric', month: 'numeric', day: 'numeric' });
+	document.getElementById("dateToday").innerHTML = todayDate;
+	document.getElementById("timeToday").innerHTML = todayTime;
+}
+function dateTimeFiller() {
+	let date = document.getElementById("dateToday").innerHTML;
+	let time = document.getElementById("timeToday").innerHTML;
 	let timeFillers = document.getElementsByName("datetime");
 	let dateFillers = document.getElementsByName("onlydate");
 	for (let i = 0; i < timeFillers.length; i++) {
-		timeFillers[i].innerHTML = dateTime;
+		timeFillers[i].innerHTML = date + ", " + time;
 	}
 	for (let i = 0; i < dateFillers.length; i++) {
-		dateFillers[i].innerHTML = onlyDate;
+		dateFillers[i].innerHTML = date;
 	}
 }
-addFillerClickListener();
-document.getElementById('content').contentEditable = 'true';
-dateTimeFiller();
